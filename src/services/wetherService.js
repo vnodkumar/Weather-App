@@ -5,5 +5,5 @@ export async function getWeather(city='btm layout'){
     const url=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
 
     const res= await axios.get(url);
-    return res.data.main
+    return res.data
 }

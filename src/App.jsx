@@ -30,10 +30,12 @@ export default function App() {
       <InputBox 
         getData={getData}
       />
+      <hr />
       <WeatherCard
         city={data?data.name:""}
-        temp={data&&data.main?data.main.temp:null}
+        data={data}
       />
+      <hr />
     </main>
   )
 }

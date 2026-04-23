@@ -5,22 +5,27 @@
 body{
     background-color: #E5EEE4;
     text-align: center;
+    background-image: url(./images/backgroundImage.jpg);
+    background-size: cover;
 }
 main{
     width: 50vw;
     height: 100vh;
     margin: auto; 
     box-shadow: 0 0 10px;
-    background-color: #C0E1D2;
+    background-color: transparent;
     border-radius: 10px;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 100px;
 }
 header{
     text-align: center;
     padding: 10px;
-    background-color: rgb(66, 66, 66);
+    background-color: rgb(38, 51, 59);
     border-radius: inherit;
-    margin-bottom: 100px;
 }
 header h1{
     font-size: 3rem;
@@ -34,15 +39,19 @@ form input,button{
     margin: 10px;
 }
 section{
-    margin-top: 10px;
+    /* width: 70%; */
+    height: 200px;
+    margin: 10px;
     text-align: justify;
     display: flex;
     justify-content: space-around;
+    font-size: 20px;
+    font-weight: 600;
 }
 #cf{
     display: flex ;
-    height: 100%;
-    background-color:#9ec2b2;
+    height: 38px;
+    background-color:#5d8294;
     border-radius: 20px;
 }
 #cf button{

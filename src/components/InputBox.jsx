@@ -5,6 +5,7 @@ export default function InputBox({getData}){
 
     async function handleSubmit(e) {
         e.preventDefault()
+        if(city==='')   return;
         await getData(city)
         setCity("")
     }

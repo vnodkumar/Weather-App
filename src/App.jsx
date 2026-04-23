@@ -7,10 +7,11 @@ import {getWeather} from './services/wetherService'
 export default function App() {
   const [data,setData]=useState({})
   const [loading,setLoading]=useState(false)
-  const [err,setErr]=useState(true)
+  const [err,setErr]=useState(false)
   
   async function getData(city) {
     try{
+      setErr(false)
       setLoading(true)
       setData(await getWeather(city))
     }
@@ -30,12 +31,13 @@ export default function App() {
       <InputBox 
         getData={getData}
       />
-      <hr />
-      <WeatherCard
+      {loading&&<h2>Fetching weather...</h2>}
+      {!loading&&!err&&<WeatherCard
         city={data?data.name:""}
         data={data}
-      />
-      <hr />
+      />}
+      {err&&<h2>City Not Found</h2>}
+      
     </main>
   )
 }
